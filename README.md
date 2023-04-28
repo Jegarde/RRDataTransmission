@@ -4,7 +4,8 @@
 - This is an early version of the project and is subject to change dramatically.
 - The limit for payloads is 65 characters. This will change in the future.
 - The room is made using beta chips and is vulnerable to breaking.
-- Room moderators & hosts should have no permissions.
+- Room moderators & hosts should have no permissions due to the method used.
+- Feel free to modify all of the source code to your own interests.
 
 ### How does this work?
 There's CV2 chips for checking if a player is a host, mod or a co-owner and you can modify a player's roles through the API. This allows me to send remote signals to the specified player while CV2 is constantly checking for each players' roles locally.
