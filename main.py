@@ -6,7 +6,7 @@ from recnetlogin import RecNetLoginAsync
 from dotenv import load_dotenv
 
 # SET THIS TO THE ROOM'S NAME YOU'RE TRANSMITTING DATA TO
-ROOM_NAME = "DataTransmissionTemplate"
+ROOM_NAME = ""
 
 # don't touch
 last_role = 0 
