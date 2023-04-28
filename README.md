@@ -1,5 +1,31 @@
 # Control panel for transmitting data to Rec Room
 
+### Good to know
+- This is an early version of the project and is subject to change dramatically.
+- The limit for payloads is 65 characters. This will change in the future.
+- The room is made using beta chips and is vulnerable to breaking.
+- Room moderators & hosts should have no permissions.
+
+### How does this work?
+There's CV2 chips for checking if a player is a host, mod or a co-owner and you can modify a player's roles through the API. This allows me to send remote signals to the specified player while CV2 is constantly checking for each players' roles locally.
+
+So let's assume the specified player doesn't have roles by default. The signals would be the following
+```
+Host = Add on bit
+Mod = Add off bit
+None = Repeat previous bit
+```
+
+Then with Python, I enter my byte and it sends each bit by modifying the player's role through the API according to the signals. So if I wanted to send `1011` in binary, the following calls would be made:
+```py
+>>> Modify [player] role to Host # Add on bit
+>>> Modify [player] role to Mod  # Add off bit
+>>> Modify [player] role to Host # Add on bit
+>>> Modify [player] role to None # Add on bit (repeat previous bit)
+```
+
+And once 8 bits have been sent, CV2 will save the byte and clear the buffer.
+
 ### Setup
 1. Clone [^DataTransmissionTemplate](https://rec.net/room/DataTransmissionTemplate)
 2. Download the source code of the control panel here.
@@ -20,3 +46,5 @@
       b. The account cannot be the same one set to `.env` or the owner of the room.
    
 3. You can now transmit a payload (strings) or a single byte.
+
+
