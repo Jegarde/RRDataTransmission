@@ -2,6 +2,7 @@
 
 ### Good to know
 - This is an early version of the project and is subject to change dramatically.
+- Contact Jegarde#3484 on Discord if you're struggling to make it work.
 - The limit for payloads is 65 characters. This will change in the future.
 - The room is made using beta chips and is vulnerable to breaking.
 - Room moderators & hosts should have no permissions due to the method used.
