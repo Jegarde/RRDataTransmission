@@ -1,7 +1,8 @@
 # Control panel for transmitting data to Rec Room
 
+*This is an early & outdated version. Everything is subject to (and will) change. It's meant for your tinkering purposes and transparency.*
+
 ### Good to know
-- This is an early version of the project and is subject to change dramatically.
 - Contact Jegarde#3484 on Discord if you're struggling to make it work.
 - The limit for payloads is 65 characters. This will change in the future.
 - The room is made using beta chips and is vulnerable to breaking.
